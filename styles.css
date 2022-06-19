@@ -1,0 +1,127 @@
+
+
+header{
+    position: absolute;
+    width: 1000px;
+    height: 32px;
+    left: 200px;
+    top: 28;
+    z-index: 3;
+}
+
+.logo {
+    position: absolute;
+    width: 160px;;
+    height: 32px;
+    left: 200px;
+    top: 28;
+}
+ul {
+    list-style: none;
+}
+nav {
+    position: absolute;
+    width: 255px;;
+    height: 15px;
+    left: 946px;
+    top: 37px;
+}
+
+nav li{
+    font-family:'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    color: #fff;
+    position: absolute;
+    height: 15px;
+    top: calc(50% - 15px/2);
+    display:inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+.logo{
+    position: absolute;
+    left: 100px;
+    top: 27px;
+
+}
+.item-1 {
+    right: 72%;
+}
+.item-2 {
+    right: 38%;
+}
+.item-3 {
+    right: 0%;
+}
+.hero-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-image: url(images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+}
+.hero-text h1 {
+    white-space: nowrap;
+
+}
+.hero-text {
+    position: absolute;
+    width: 30%;
+    height: 313px;
+    left: 35%;
+    top: 372px;
+}
+
+h1 {
+    font-family:'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+}
+
+p {
+    font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+text-align: center;
+}
+.hero-text p {
+    color: #fff;
+}
+
+.hero-btn{
+    color:#fff;    
+    border-radius: 22px;
+    background-color: #FF6565;
+    border:none;
+    padding: 13px 31px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+}

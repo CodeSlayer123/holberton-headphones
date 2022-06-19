@@ -1,75 +1,190 @@
-
-
-header{
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+    max-width: 100px;
+}
+header {
     position: absolute;
-    width: 1000px;
-    height: 32px;
-    left: 200px;
-    top: 28;
-    z-index: 3;
+    width: 100%;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50px;
+  z-index: 3;
+  left: 60%;
+  overflow: hidden;
+    
+  
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  width: 8rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #FF6565;
 }
 
 .logo {
-    position: absolute;
-    width: 160px;;
-    height: 32px;
-    left: 200px;
-    top: 28;
+    padding-top: 40px;
+    width: 15%;
+    padding-left: 20%;
 }
 
-nav {
-    position: absolute;
-    width: 255px;;
-    height: 15px;
-    left: 946px;
-    top: 37;
+
+
+
+
+
+.hamb{
+    cursor: pointer;
+    float: left;
+    padding: 0px 30px;
+    display: none;
 }
 
-nav li{
-    font-family:'Source Sans Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+.hamb-line {
+    background: white;
+    display: block;
+    height: 0.185rem;
+    position: relative;
+    width: 10px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 200%;
+}
+.hamb-line::before{
+    top: 7px;
+}
+.hamb-line::after{
+    top: -7px;
+}
+
+.side-menu {
+    display: none;
+} 
+
+
+/* Toggle menu icon */
+.side-menu:checked ~ .navMenu{
+    max-height: 100%;
+    display: block;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 480px) {
+    .navMenu {
+        top: 7rem;
+        overflow: hidden;
+        display: none;
+        left: 40%;
+        position: absolute;
+
+    }
+    .navMenu a {
+        width: 10rem;
+        padding-bottom: 19px;
+    }
+
+    .hamb{
+        display: block;
+    }
+}
+.hero {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.hero .hero-inner{
+    width: 100%;
+    height: 10vh;
+
+}
+.hero h1 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
     color: #fff;
 }
-.item-1 {
-    position: absolute;
-    height: 15px;
-    left: 0%;
-    right: 76%;
-    top: calc(50% - 15px/2);
-}
-.item-2 {
-    position: absolute;
-    height: 15px;
-    left: 40%;
-    right: 38%;
-    top: calc(50% - 15px/2);
-}
-.item-3 {
-    position: absolute;
-    height: 15px;
-    left: 78%;
-    right: 0%;
-    top: calc(50% - 15px/2);
-}
-.hero-section {
-    position: absolute;
-    width: 100%;
-    height: 800px;
-    left: 0px;
-    top: 0px;
-    background-image: url(images/headphones_hero_1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 
+.hero h3 {
+    color: #fff;
 }
-.hero-text {
-    position: absolute;
-    width: 637px;
-    height: 313px;
-    left: 382px;
-    top: 372px;
+.hero p {
+    color: #fff;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    line-height: 1.5em;
+}
+.hero .hero-btn {
+    display: block;
+    width: 200px;
+    padding: 1em;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-size: 1em;
+    background-color: #FF6565;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.hero .hero-btn:hover {
+    opacity: 0.9;
 }
