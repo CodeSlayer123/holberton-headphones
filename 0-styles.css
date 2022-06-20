@@ -63,7 +63,7 @@ body {
     height: 0.185rem;
     position: relative;
     width: 10px;
-
+    top: -20px;
 }
 
 .hamb-line::before,
@@ -123,12 +123,15 @@ body {
 
     }
     .navMenu a {
-        width: 10rem;
-        padding-bottom: 19px;
+        padding-bottom: 18px;
+        display: block;
     }
 
     .hamb{
         display: block;
+    }
+    .logo img{
+        padding-left: 25px;
     }
 }
 .hero {
