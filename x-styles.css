@@ -1,0 +1,257 @@
+/* HEADPHONES HOLBERTON WEBPAGE */
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+      max-width: 100px;
+  }
+
+  body {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+  }
+
+/* HEADER */
+
+  header {
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+  }
+
+/* LOGO */
+
+.logo {
+    padding-top: 2rem;
+    padding-left: 20%;
+}
+
+.logo img {
+    width: 15rem;
+}
+
+/* NAV BAR */
+
+  nav {
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    left: 60%;
+    overflow: hidden;
+  }
+
+  nav a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    width: 8rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  nav a:hover {
+    color: #FF6565;
+  }
+
+/* MOBILE MENU */
+
+  .mobile-menu {
+      cursor: pointer;
+      float: left;
+      padding: 0px 30px;
+      display: none;
+  }
+
+  .mobile-menu-line {
+      background: white;
+      display: block;
+      height: 0.185rem;
+      position: relative;
+      width: 10px;
+      top: -20px;
+  }
+
+  .mobile-menu-line::before,
+  .mobile-menu-line::after {
+      background: white;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 200%;
+  }
+
+  .mobile-menu-line::before {
+      top: 7px;
+  }
+  .mobile-menu-line::after {
+      top: -7px;
+  }
+
+  .side-menu {
+      display: none;
+  }
+
+  /* TOGGLE MENU ICON */
+
+  .side-menu:checked ~ .navMenu {
+      max-height: 100%;
+      display: block;
+  }
+  .side-menu:checked ~ .mobile-menu .mobile-menu-line {
+      background: transparent;
+  }
+  .side-menu:checked ~ .mobile-menu .mobile-menu-line::before {
+      transform: rotate(-45deg);
+      top:0;
+  }
+  .side-menu:checked ~ .mobile-menu .mobile-menu-line::after {
+      transform: rotate(45deg);
+      top:0;
+  }
+
+  @media(max-width: 480px) {
+      nav {
+          top: 7rem;
+          overflow: hidden;
+          display: none;
+          left: 40%;
+          position: absolute;
+
+      }
+      nav a {
+          padding-bottom: 18px;
+          display: block;
+      }
+
+      .mobile-menu {
+          display: block;
+      }
+      .logo img {
+          padding-left: 25px;
+      }
+  }
+
+/* HERO SECTION */
+
+  .hero-section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url(images/headphones_hero_1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+
+  .hero .hero-text{
+      width: 100%;
+      height: 10vh;
+
+  }
+
+  .hero-section h1 {
+      font-size: 3em;
+      margin-top: 0;
+      margin-bottom: 0.2em;
+      color: #fff;
+  }
+
+  .hero-section h3 {
+      color: #fff;
+  }
+
+  .hero-section p {
+      color: #fff;
+      font-size: 1em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+      line-height: 1.5em;
+  }
+
+  .hero-section button {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 22px;
+    padding: 15px 25px 15px 25px;
+    background: #FF6565;
+    color: #fff;
+    border: 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+  }
+
+  .hero-section button:hover, button:active {
+    opacity: 0.9;
+  }
+
+/* WHAT WE DO SECTION */
+
+  .what-we-do {
+    text-align: center;
+    width: 100vh;
+    padding: 100px 500px 100px 500px;
+  }
+
+  .what-we-do .wwd-top {
+      display: inline-block;
+      width: 65%;
+  }
+
+  .what-we-do p {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+}
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  .row {
+      padding-top: 60px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+/* RESULTS SECTION */
+
+  .results {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      text-align: center;
+  }
+
+  .results .row .column {
+      background-image: url(images/pentagone.png);
+  }
+
+/* CONTACT US */
+
+
+/* FOOTER */
