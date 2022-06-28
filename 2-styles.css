@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+      max-width: 100px;
+  }
+  header {
+      position: absolute;
+      width: 100%;
+  }
+  body {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    overflow-x:hidden;
+  
+  }
+  /*nav*/
+  .navMenu {
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    left: 60%;
+    overflow: hidden;
+  }
+  
+  .navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    width: 8rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:hover {
+    color: #FF6565;
+  }
+  
+  .logo {
+      padding-top: 40px;
+      width: 15%;
+      padding-left: 20%;
+  }
+  
+  
+  
+  
+  /*hamburger mobile menu*/
+  
+  .hamb{
+      cursor: pointer;
+      float: left;
+      padding: 0px 30px;
+      display: none;
+  }
+  
+  .hamb-line {
+      background: white;
+      display: block;
+      height: 0.185rem;
+      position: relative;
+      width: 10px;
+      top: -20px;
+  }
+  
+  .hamb-line::before,
+  .hamb-line::after{
+      background: white;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 200%;
+  }
+  .hamb-line::before{
+      top: 7px;
+  }
+  .hamb-line::after{
+      top: -7px;
+  }
+  
+  .side-menu {
+      display: none;
+  }
+  
+  
+  /* Toggle menu icon */
+  .side-menu:checked ~ .navMenu{
+      max-height: 100%;
+      display: block;
+  }
+  .side-menu:checked ~ .hamb .hamb-line {
+      background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+      transform: rotate(-45deg);
+      top:0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+      transform: rotate(45deg);
+      top:0;
+  }
+  
+  
+  
+  /* headings */
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+  
+  /* hero section */
+  .hero {
+      width: 100vw;
+      height: 100vh;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  
+      background-image: url(images/headphones_hero_1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+  .hero .hero-inner{
+      width: 100%;
+      height: 10vh;
+  
+  }
+  .hero h1 {
+      margin-top: 0;
+      margin-bottom: 0.2em;
+      color: #fff;
+  }
+  
+  .hero h3 {
+      color: #fff;
+  }
+  .hero p {
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+  }
+  .hero .hero-btn {
+      display: block;
+      width: 200px;
+      padding: 1em;
+      margin-top: 50px;
+      margin-bottom: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #fff;
+      font-size: 1em;
+      background-color: #FF6565;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  }
+  .hero .hero-btn:hover {
+      opacity: 0.9;
+  }
+  
+  
+  /* what we do section */
+  .what-we-do {
+    width: 100vw;
+    height: 60vh;
+  
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+  
+  }
+  .what-we-do .hero-inner{
+    width: 100%;
+    height: 10vh;
+  
+  }
+  .what-we-do h2 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+  }
+  
+  .what-we-do p {
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding-top: 20px;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    height: 200px;
+    width: 100%;
+    margin-top: 75px;
+    justify-content: space-between; /* could also try with space-around */
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  
+  .flex-child {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 6px;
+    padding: 16px;
+    flex: 1;
+  }
+  
+  
+  .what-we-do .flex-child p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  
+  /*icons */
+  
+  @font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('./fonts/fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('./fonts/fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('./fonts/fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('./fonts/fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('./fonts/fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 96px;
+    color: #FF6565;
+  
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  
+  
+  
+  /* results section */
+  
+  
+  .results {
+    width: 100vw;
+    height: 60vh;
+  
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  
+    padding-top: 150px;;
+  
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #071629;
+  
+  }
+  .results .results-inner{
+    width: 100%;
+  
+  }
+  .results h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+  }
+  
+  .results p {
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding-top: 20px;
+  }
+  
+  .pent{
+    background-image: url("images/pentagone.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    min-width: 200px;
+   
+  }
+  
+  .pent-text {
+    padding: 40px;
+    margin: 40px 0 0 0;
+  
+  }
+  /*
+  .results .flex-child {
+    background-image: url("images/pentagone.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 45px;
+    
+  }
+  */
+  
+  .results-percentage {
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .results .flex-child p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  /*mobile */
+  
+  
+  @media(max-width: 480px) {
+    .navMenu {
+        top: 7rem;
+        overflow: hidden;
+        display: none;
+        left: 40%;
+        position: absolute;
+  
+    }
+    .navMenu a {
+        padding-bottom: 10px;
+        display: block;
+    }
+  
+    .hamb{
+        display: block;
+    }
+    .logo img{
+        padding-left: 25px;
+    }
+  
+    .hero h1 {
+      font-size: 32px !important;
+      padding-left: 35px;
+      padding-right: 35px;
+  }
+    .hero p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90% !important;
+  }
+    .what-we-do {
+      margin-bottom: 800px;
+    }
+    .what-we-do p {
+     width: 90% !important;
+    
+  }
+    .what-we-do .flex-child p {
+      width: 50%;
+  }
+    .results {
+      height: 165vh !important;
+      background-size: 1500px;
+      background-position: top center;
+  
+  
+    }
+  
+    .results h2 {
+     width: 50%;
+     margin-left: auto;
+     margin-right: auto;
+    }
+    
+    .results p {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    
+  }
+  
+  
+  
+  /* tablet */
+  @media (max-width:768px) {
+    .navMenu a {
+      width: 6rem;
+      font-size: 0.90em;
+    }
+    .hero h1 {
+      font-size: 32px !important;
+      padding-left: 35px;
+      padding-right: 35px;
+  }
+    .hero p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90% !important;
+  }
+  
+    .what-we-do p {
+      width: 70%;
+    }
+    .flex-container {
+      width: 90%;
+    }
+    .flex-child {
+      flex: 1 1 40%;
+    }
+    
+    .results {
+      margin-top: 300px;
+      height: 100vh;
+      background-size: 1500px;
+      background-position: top center;
+     }
+   
+     .results h2 {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+     }
+     
+     .results p {
+       width: 85%;
+       margin-left: auto;
+       margin-right: auto;
+     }
+  }
